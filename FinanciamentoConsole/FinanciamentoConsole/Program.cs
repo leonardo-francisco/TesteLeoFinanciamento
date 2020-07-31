@@ -84,7 +84,7 @@ namespace FinanciamentoConsole
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("Status do Credito: Recusado. Motivo: A quantidade de parcelas minima é de 5x e maxima é de 72x");
                     }
-                    else if (dtVenc.Day < vencMin.Day || dtVenc.Day > vencMax.Day)
+                    else if (dtVenc.Day < vencMin.Day && dtVenc.Day > vencMax.Day)
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("Status do Credito: Recusado. Motivo: A data do primeiro vencimento sempre será no minimo D+15 e no maximo D+40");
